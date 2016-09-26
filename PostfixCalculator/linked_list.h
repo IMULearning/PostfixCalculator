@@ -49,12 +49,4 @@ int insertAtIndex(struct linkedlist* list, int index, struct node* n);
 // Note that remove detaches the node from the list, but it does not free its memory.
 struct node* removeAtIndex(struct linkedlist* list, int index);
 
-// Prints the specified list in arbitary format.
-// If the list is NULL, <NULL> will be printed.
-void print(struct linkedlist* list);
-
-// Prints the specified list in reversed order in arbitary format.
-// If the list is NULL, <NULL> will be printed.
-void printReverse(struct linkedlist* list);
-
 #endif /* linked_list_h */

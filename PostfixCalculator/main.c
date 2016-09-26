@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "queue.h"
 #include "parser.h"
 #include "node.h"
@@ -43,9 +44,14 @@ int main(int argc, const char * argv[]) {
         
     inputExpression:
         
-        printf("type the expression\n");
+        printf("type the expression (or 'exit' to quit)\n");
         printf("> ");
         scanf("\n%500[^\n]", expression);
+        
+        if (strncmp(expression, "exit", 4) == 0) {
+            printf("bye\n");
+            return 0;
+        }
         
         struct queue* q;
         int rc = 0;

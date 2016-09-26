@@ -42,38 +42,3 @@ int sizeOfQueue(struct queue* q) {
     }
     return sizeOfList(q->list);
 }
-
-void printQueue(struct queue* q) {
-    if (q == NULL || q->list == NULL) {
-        printf("<NULL>\n");
-        return;
-    }
-    
-    if (sizeOfQueue(q) == 0) {
-        printf("<EMPTY>\n");
-        return;
-    }
-    
-    int width = sizeOfQueue(q) * 2;
-    
-    // print upper border
-    int i = 0;
-    for (i = 0; i < width; i++) {
-        printf("-");
-    }
-    
-    // print content
-    printf("\n");
-    struct node* cursor;
-    for (cursor = q->list->head; cursor != NULL; cursor = cursor->next) {
-        printf("%s ", asString(cursor));
-    }
-    printf("size=%d\n", sizeOfQueue(q));
-    
-    //print lower border
-    for (i = 0; i < width; i++) {
-        printf("-");
-    }
-    
-    printf("\n\n");
-}

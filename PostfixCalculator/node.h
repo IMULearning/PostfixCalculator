@@ -61,7 +61,4 @@ struct node {
 // Create a new node
 struct node* newNode(union token value, int type);
 
-// Return the node content as a string
-char* asString(struct node* n);
-
 #endif /* node_h */

@@ -40,8 +40,4 @@ void push(struct stack* s, struct node* n);
 // Returns -1 if the stack is NULL.
 int sizeOfStack(struct stack* s);
 
-// Prints out the content of the stack in an arbintary way.
-// Prints <NULL> when stack is NULL or the list in stack is NULL.
-void printStack(struct stack* s);
-
 #endif /* stack_h */

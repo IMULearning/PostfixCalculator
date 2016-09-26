@@ -40,8 +40,4 @@ void enqueue(struct queue* q, struct node* n);
 // Returns -1 if the queue is NULL.
 int sizeOfQueue(struct queue* q);
 
-// Prints out the content of the queue in an arbintary way.
-// Prints <NULL> when stack is NULL or the list in queue is NULL.
-void printQueue(struct queue* q);
-
 #endif /* queue_h */

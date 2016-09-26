@@ -24,18 +24,3 @@ struct node* newNode(union token value, int type) {
     n->next = NULL;
     return n;
 }
-
-char* asString(struct node* n) {
-    if (n->type == operator) {
-        return &n->value.operatorValue;
-    } else if (n->type == operand) {
-        int size = log10(n->value.operatorValue) + 1;
-        char *x = malloc(size);
-        snprintf(x, size, "%d", n->value.operatorValue);
-        return x;
-    } else if (n->type == parenthesis) {
-        return &n->value.parenthesisValue;
-    } else {
-        return NULL;
-    }
-}

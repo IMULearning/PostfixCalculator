@@ -42,38 +42,3 @@ int sizeOfStack(struct stack* s) {
     }
     return sizeOfList(s->list);
 }
-
-void printStack(struct stack* s) {
-    if (s == NULL || s->list == NULL) {
-        printf("<NULL>\n");
-        return;
-    }
-    
-    if (sizeOfStack(s) == 0) {
-        printf("<EMPTY>\n");
-        return;
-    }
-    
-    int width = sizeOfStack(s) * 2 + 1;
-    
-    // print upper border
-    int i = 0;
-    for (i = 0; i < width; i++) {
-        printf("-");
-    }
-    
-    // print content
-    printf("\n|");
-    struct node* cursor;
-    for (cursor = s->list->head; cursor != NULL; cursor = cursor->next) {
-        printf("%c ", cursor->value);
-    }
-    printf("size=%d\n", sizeOfStack(s));
-    
-    //print lower border
-    for (i = 0; i < width; i++) {
-        printf("-");
-    }
-    
-    printf("\n\n");
-}
