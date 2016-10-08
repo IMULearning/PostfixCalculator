@@ -162,9 +162,9 @@ int pushToOutputStack(struct stack* outputStack, struct node* token) {
         struct node* firstOp = pop(outputStack);
         
         if (secondOp == NULL || firstOp == NULL) {
-            return InvalidExpression;
+            return InsufficientOperands;
         } else if (secondOp->type != operand || firstOp->type != operand) {
-            return InvalidExpression;
+            return InsufficientOperands;
         }
         
         struct node* result = performCalculation(token->value.operatorValue,

@@ -87,7 +87,7 @@ char* renderRc(int rc) {
             return "no expression provided";
         
         case OutputStackNotExhausted:
-            return "output stack didn't exhaust";
+            return "output stack didn't exhaust (potential insufficient operators)";
             
         case NonOperandTypeInTheEnd:
             return "no operand left at the end of algorithm run";
@@ -97,6 +97,9 @@ char* renderRc(int rc) {
         
         case InvalidTokenInOutput:
             return "invalid token in output stack";
+            
+        case InsufficientOperands:
+            return "insufficient operands";
             
         case InvalidExpression:
             return "invalid expression";

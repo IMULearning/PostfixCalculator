@@ -17,7 +17,8 @@
 #define MisMatchingParenthesis      -0x0013
 #define InvalidTokenInOutput        -0x0014
 #define InvalidExpression           -0x0015
-#define InvalidOperator             -0x0016
+#define InsufficientOperands        -0x0016
+#define InvalidOperator             -0x0017
 
 #include <stdio.h>
 
